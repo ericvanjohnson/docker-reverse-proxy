@@ -1,0 +1,29 @@
+###########################################################
+# General Setup
+###########################################################
+
+### Docker compose files ###############################################################################################
+# Select which docker-compose files to include.
+# If using docker-sync. Set the value to: docker-compose.yml:docker-compose.dev.yml:docker-compose.sync.yml
+# Change the separator from : to ; on Windows
+
+COMPOSE_PATH_SEPARATOR=:
+COMPOSE_FILE=docker-compose.yml
+
+### Docker Host IP #####################################################################################################
+# Enter your Docker Host IP (will be appended to /etc/hosts). Default is `10.0.75.1`
+
+DOCKER_HOST_IP=10.0.75.1
+
+### Windows Path #######################################################################################################
+# A fix for Windows users, to ensure the application path works.
+
+COMPOSE_CONVERT_WINDOWS_PATHS=1
+
+### NGINX ##############################################################################################################
+
+NGINX_HOST_HTTP_PORT=8080
+NGINX_HOST_HTTPS_PORT=4443
+NGINX_HOST_LOG_PATH=./logs/nginx/
+NGINX_SITES_PATH=./nginx/sites/
+
